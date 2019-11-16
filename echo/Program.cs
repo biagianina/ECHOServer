@@ -28,7 +28,7 @@ namespace echo
                 client = server.AcceptTcpClient();
                 byte[] recieved = new byte[100];
                 NetworkStream stream = client.GetStream();
-
+                
                 stream.Read(recieved, 0, recieved.Length);
                 string message = Encoding.ASCII.GetString(recieved, 0, recieved.Length);
                 Console.WriteLine("Client said: " + message);
